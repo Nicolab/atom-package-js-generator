@@ -6,7 +6,10 @@
   "activationEvents": [
     "package-js-generator:generate-package"
   ],
-  "repository": "https://github.com/Nicolab/atom-package-js-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nicolab/atom-package-js-generator"
+  },
   "bugs": {
     "url": "https://github.com/Nicolab/atom-package-js-generator/issues"
   },

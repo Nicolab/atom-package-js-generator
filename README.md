@@ -1,5 +1,7 @@
 # package-js-generator package
 
+[A package for Atom.io](https://atom.io/packages/package-js-generator)
+ 
 Generate Atom.io packages in Javascript.
 
 The command `package-generator:generate-package` provided by Atom generate a package in CoffeeScript.

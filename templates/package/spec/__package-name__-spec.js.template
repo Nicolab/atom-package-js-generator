@@ -1,0 +1,34 @@
+var WorkspaceView = require('atom').WorkspaceView;
+var __PackageName__ = require('../lib/__package-name__');
+
+describe("__PackageName__", function() {
+
+  var activationPromise = null;
+
+  beforeEach(function() {
+    atom.workspaceView = new WorkspaceView();
+    activationPromise = atom.packages.activatePackage('__package-name__');
+  });
+
+  describe("when the __package-name__:toggle event is triggered", function() {
+
+    it("attaches and then detaches the view", function() {
+
+      expect(atom.workspaceView.find('.__package-name__')).not.toExist();
+
+      atom.workspaceView.trigger('__package-name__:toggle');
+
+      waitsForPromise(function() {
+        return activationPromise;
+      });
+
+      runs(function() {
+        expect(atom.workspaceView.find('.__package-name__')).toExist();
+        atom.workspaceView.trigger('__package-name__:toggle');
+        expect(atom.workspaceView.find('.__package-name__')).not.toExist();
+      });
+      
+    });
+
+  });
+});

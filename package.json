@@ -1,0 +1,33 @@
+{
+  "name": "package-js-generator",
+  "main": "./lib/package-js-generator",
+  "version": "0.0.0",
+  "description": "Generate Atom.io packages in Javascript. Like `package-generator:generate-package` command but the packages are generated in JS instead of CoffeeScript.",
+  "activationEvents": [
+    "package-js-generator:generate-package"
+  ],
+  "repository": "https://github.com/Nicolab/atom-package-js-generator",
+  "bugs": {
+    "url": "https://github.com/Nicolab/atom-package-js-generator/issues"
+  },
+  "author": {
+    "name": "Nicolas Tallefourtane",
+    "url": "http://nicolab.net"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Nicolab/atom-package-js-generator/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "atom-helpers": ">= 1.0.0 < 2.0.0",
+    "fs-plus": "2.x",
+    "wrench": "~1.5.1",
+    "temp": "0.5.0",
+    "underscore-plus": "1.x"
+  }
+}

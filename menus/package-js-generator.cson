@@ -1,0 +1,19 @@
+# See https://github.com/Nicolab/atom-package-js-generator
+'context-menu':
+  '.overlayer':
+      'Enable package-js-generator': 'package-js-generator:generate-package'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'package-js-generator'
+      'submenu': [
+        {
+          'label': 'Generate Package in JS',
+          'command': 'package-js-generator:generate-package'
+        }
+      ]
+    ]
+  }
+]

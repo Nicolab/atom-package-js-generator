@@ -1,0 +1,50 @@
+var helpers = require('atom-helpers');
+var View    = require('atom').View;
+
+/**
+ * @constructor
+ */
+function __PackageName__View () {
+  View.apply(this, arguments);
+}
+
+// inheritance like `class __PackageName__View extends View`
+helpers.extends(__PackageName__View, View);
+
+
+__PackageName__View.content = function() {
+
+  return this.div(
+    {
+      'class': '__package-name__ overlay from-top'
+    },
+
+    function() {
+      return this.div("The __PackageName__ package is Alive! It's ALIVE!", {
+        'class': 'message'
+      });
+    }.bind(this));
+};
+
+__PackageName__View.prototype.initialize = function(serializeState) {
+
+  return atom.workspaceView.command('__package-name__:toggle', function() {
+      return this.toggle();
+  }.bind(this));
+};
+
+__PackageName__View.prototype.serialize = function() {};
+
+__PackageName__View.prototype.destroy = function() {
+  return this.detach();
+};
+
+__PackageName__View.prototype.toggle = function() {
+
+  console.log('__PackageName__View was toggled!');
+
+  return this.hasParent() ? this.detach() : atom.workspaceView.append(this);
+};
+
+
+module.exports = __PackageName__View;

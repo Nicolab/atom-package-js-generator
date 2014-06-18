@@ -1,7 +1,7 @@
 {
   "name": "package-js-generator",
   "main": "./lib/package-js-generator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Generate Atom.io packages in Javascript. Like `package-generator:generate-package` command but the packages are generated in JS instead of CoffeeScript.",
   "activationEvents": [
     "package-js-generator:generate-package"

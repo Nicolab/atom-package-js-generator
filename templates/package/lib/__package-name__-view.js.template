@@ -5,7 +5,11 @@ var View    = require('atom').View;
  * @constructor
  */
 function __PackageName__View () {
+
   View.apply(this, arguments);
+  
+  // also, for "super" constructor you can use: 
+  // View.__super__.constructor.apply(this, arguments);
 }
 
 // inheritance like `class __PackageName__View extends View`

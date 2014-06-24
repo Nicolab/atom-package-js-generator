@@ -1,7 +1,7 @@
 var WorkspaceView = require('atom').WorkspaceView;
 var __PackageName__ = require('../lib/__package-name__');
 
-describe("__PackageName__", function() {
+describe('__PackageName__', function() {
 
   var activationPromise = null;
 
@@ -10,9 +10,9 @@ describe("__PackageName__", function() {
     activationPromise = atom.packages.activatePackage('__package-name__');
   });
 
-  describe("when the __package-name__:toggle event is triggered", function() {
+  describe('when the __package-name__:toggle event is triggered', function() {
 
-    it("attaches and then detaches the view", function() {
+    it('attaches and then detaches the view', function() {
 
       expect(atom.workspaceView.find('.__package-name__')).not.toExist();
 

@@ -2,7 +2,7 @@
  * @name package-js-generator (spec)
  * @author Nicolas Tallefourtane <dev@nicolab.net>
  * @link https://github.com/Nicolab/atom-package-js-generator
- * @license MIT https://github.com/Nicolab/atom-package-js-generator/blob/master/LICENSE
+ * @license MIT https://github.com/Nicolab/atom-package-js-generator/blob/master/LICENSE.md
  */
 
 var path           = require('path');
@@ -17,6 +17,7 @@ describe('Package Generator', function() {
   beforeEach(function() {
     atom.workspaceView = new WorkspaceView();
     atom.workspaceView.openSync('sample.js');
+
     activationPromise = atom.packages.activatePackage('package-js-generator');
 
     return activationPromise;
@@ -220,7 +221,8 @@ describe('Package Generator', function() {
 
         packageJsGeneratorView.miniEditor.setText(packagePath);
 
-        pgExecute = spyOn(packageJsGeneratorView, 'initPackage').andCallFake(function(packagePath, callback) {
+        pgExecute = spyOn(packageJsGeneratorView, 'initPackage')
+          .andCallFake(function(packagePath, callback) {
 
           return process.nextTick(function() {
             return callback();

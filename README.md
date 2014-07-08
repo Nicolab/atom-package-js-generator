@@ -1,12 +1,15 @@
 # package-js-generator package
 
 [A package for Atom.io](https://atom.io/packages/package-js-generator)
- 
+
 Generate Atom.io packages in Javascript.
 
 The command `package-generator:generate-package` provided by Atom generate a package in CoffeeScript.
 _package-js-generator_ package provides the command `package-js-generator:generate-package`
 that generates a package in Javascript.
+
+The package generated contains the "node_modules/[atom-helpers](https://github.com/Nicolab/atom-helpers)",
+in order to facilitate some cases of package development (`extends(MyView, View)`, get current file, get current buffer, ...).
 
 
 ## Install

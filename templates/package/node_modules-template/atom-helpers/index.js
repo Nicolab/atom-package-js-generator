@@ -5,4 +5,5 @@
  * @license MIT https://github.com/Nicolab/atom-helpers/blob/master/LICENSE
  */
 
+module.exports.editor  = require('./lib/editor');
 module.exports.extends = require('./lib/utils').extends;

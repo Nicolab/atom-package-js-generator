@@ -33,7 +33,7 @@ module.exports.getCurrentFilePath = function getCurrentFilePath() {
 
   var file = this.getCurrentFile();
 
-  if(file.path) {
+  if(file && file.path) {
     return file.path;
   }
 

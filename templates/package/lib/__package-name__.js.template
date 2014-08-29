@@ -2,20 +2,21 @@ var __PackageName__View = require('./__package-name__-view');
 
 module.exports = {
 
-    __packageName__View: null,
+  __packageName__View: null,
 
-    activate: function(state) {
-      return this.__packageName__View =
-        new __PackageName__View(state.__packageName__ViewState);
-    },
+  activate: function(state) {
+    return this.__packageName__View = new __PackageName__View(
+      state.__packageName__ViewState
+    );
+  },
 
-    deactivate: function() {
-      return this.__packageName__View.destroy();
-    },
+  deactivate: function() {
+    return this.__packageName__View.destroy();
+  },
 
-    serialize: function() {
-      return {
-        __packageName__ViewState: this.__packageName__View.serialize()
-      };
-    }
-  };
+  serialize: function() {
+    return {
+      __packageName__ViewState: this.__packageName__View.serialize()
+    };
+  }
+};

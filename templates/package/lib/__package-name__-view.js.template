@@ -7,8 +7,8 @@ var View    = require('atom').View;
 function __PackageName__View () {
 
   View.apply(this, arguments);
-  
-  // also, for "super" constructor you can use: 
+
+  // also, for "super" constructor you can use:
   // View.__super__.constructor.apply(this, arguments);
 }
 
@@ -24,16 +24,19 @@ __PackageName__View.content = function() {
     },
 
     function() {
+    
       return this.div("The __PackageName__ package is Alive! It's ALIVE!", {
         'class': 'message'
       });
-    }.bind(this));
+    }.bind(this)
+  );
 };
 
 __PackageName__View.prototype.initialize = function(serializeState) {
 
   return atom.workspaceView.command('__package-name__:toggle', function() {
-      return this.toggle();
+
+    return this.toggle();
   }.bind(this));
 };
 

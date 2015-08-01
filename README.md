@@ -1,5 +1,7 @@
 # package-js-generator package
 
+> __No longer maintained__ Sorry, for now, I do not have time to migrate to Atom V1 API.
+
 [A package for Atom.io](https://atom.io/packages/package-js-generator)
 
 Generate Atom.io packages in Javascript.

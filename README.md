@@ -1,6 +1,6 @@
 # package-js-generator package
 
-> __No longer maintained__ Sorry, for now, I do not have time to migrate to Atom V1 API.
+> __No longer maintained:__ Now the official Atom package generator support the Javascript!
 
 [A package for Atom.io](https://atom.io/packages/package-js-generator)
 
